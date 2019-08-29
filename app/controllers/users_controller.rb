@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    
+
     get '/login' do
         erb :login
     end
@@ -7,14 +7,18 @@ class UsersController < ApplicationController
     post '/login' do
         @user = User.find_by(name: params["name"])
         if !!@user == true
-            redirect :logged_in
+            redirect :home
         else
             erb :login
         end
     end
 
-    get '/logged_in' do
+    get '/home' do
         erb :logged_in
+    end
+
+    get '/signup' do
+        erb :signup
     end
 
 end

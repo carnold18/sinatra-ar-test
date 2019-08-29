@@ -34,13 +34,12 @@ describe "Users Controller" do
             end
         end
 
-        it "'/login' will route to '/logged_in' if user exists in db" do
+        it "'/login' will route to '/signup' if selected" do
             visit '/login'
             fill_in('name', :with => 'Jane')
             fill_in('password', :with => 'idk what this is going to do')
-                # binding.pry
-            click_link('Submit')
-            expect(page.current_path).to eq('/logged_in')
+            click_link('Sign Up!')
+            expect(page.current_path).to eq('/signup')
             # visit '/logged_in'
             # find('h1')
         end
