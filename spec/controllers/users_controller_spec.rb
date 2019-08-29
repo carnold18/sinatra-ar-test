@@ -20,12 +20,12 @@ describe "Users Controller" do
             expect(page).to have_field('password')
         end
 
-        # it "'/login' allows a user to login on form submission" do
-        #     visit '/login'
-        #     fill_in('name', :with => 'Jane')
-        #     fill_in('password', :with => 'idk what this is going to do')
-        #     find_button('submit').click
-        # end
+        it "'/login' allows a user to login on form submission" do
+            visit '/login'
+            fill_in('name', :with => 'Jane')
+            fill_in('password', :with => 'idk what this is going to do')
+            find_button('submit').click
+        end
 
         it "'/login' has input field" do
             visit '/login'
@@ -40,8 +40,6 @@ describe "Users Controller" do
             fill_in('password', :with => 'idk what this is going to do')
             click_link('Sign Up!')
             expect(page.current_path).to eq('/signup')
-            # visit '/logged_in'
-            # find('h1')
         end
 
     end
