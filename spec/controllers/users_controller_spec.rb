@@ -1,9 +1,19 @@
 require "spec_helper"
 
-
 describe "Users Controller" do
 
-    describe "logs in a user" do 
+    # want to be able to view the login page
+
+    # want the login page to have a form with an input field for a name
+
+    # want the login page to have a form with an input field for a password
+    
+    # want the form to have a clickable submit button
+
+    # want the form to have a redirect if user select "Sign Up!"
+
+    # let's take a look at available RSPEC & Capybara 'macros'
+
 
         it "can visit '/login'" do
             get '/login'
@@ -36,12 +46,10 @@ describe "Users Controller" do
 
         it "'/login' will route to '/signup' if selected" do
             visit '/login'
-            fill_in('name', :with => 'Jane')
-            fill_in('password', :with => 'idk what this is going to do')
+            # fill_in('name', :with => 'Jane')
+            # fill_in('password', :with => 'idk what this is going to do')
             click_link('Sign Up!')
             expect(page.current_path).to eq('/signup')
         end
-
-    end
 
 end
