@@ -13,7 +13,5 @@ describe "Users Controller" do
     # want the form to have a redirect if user select "Sign Up!"
 
     # let's take a look at available RSPEC & Capybara 'macros'
-
     
-
 end
