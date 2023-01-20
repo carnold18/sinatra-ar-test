@@ -1,7 +1,7 @@
     
 source 'http://rubygems.org'
 
-gem 'activerecord', '5.2.0'
+gem 'activerecord', '6.1.7.1'
 gem 'database_cleaner'
 gem 'pry'
 gem 'pry-nav'
